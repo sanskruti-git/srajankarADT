@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <!-- {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <ul class="flashes">
+    {% for category, message in messages %}
+      <li class="{{ category }}">{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %} -->
+
+
+    <style>
+        body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content-box {
+    width: 100%;
+    max-width: 950px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.brand-section {
+    background-color: #ff4b6e;
+    color: white;
+    padding: 30px;
+    flex: 1;
+}
+
+.form-section {
+    background-color: #fff;
+    padding: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2 {
+    margin: 0 0 20px 0;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button-group {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn-login, .btn-signup {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 5px; /* Adds space between the buttons */
+    flex-grow: 1;
+}
+
+.btn-login {
+    background-color: #ff4b6e;
+    color: white;
+}
+
+.btn-signup {
+    background-color: white;
+    color: #ff4b6e;
+    border: 1px solid #ff4b6e;
+}
+
+.btn-login:hover {
+    background-color: #e8435a;
+}
+
+.btn-signup:hover {
+    background-color: #ffe4e9;
+}
+
+/* Responsive adjustments might be necessary */
+@media (max-width: 768px) {
+    .content-box {
+        flex-direction: column;
+        max-width: none;
+    }
+
+    .brand-section, .form-section {
+        flex: none;
+        width: 100%;
+    }
+}
+
+    </style>
+    <div class="wrapper">
+        <div class="content-box">
+            <div class="brand-section">
+                <h1>MONEY MATRIX: ASSET COORDINATOR</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+            <div class="form-section">
+                <h2>Create your account</h2>
+                <form id="registerForm" method="post" action="{{ url_for('register') }}">
+                    <div class="input-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Full Name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+                    </div>
+                    <div class="button-group">
+                        <button type="submit" class="btn-login">Register</button>
+                        <a href="{{url_for('login_page')}}" type="button" class="btn-signup">Sign In</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
