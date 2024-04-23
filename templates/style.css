@@ -1,0 +1,245 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.brand-section, .login-section {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.brand-section {
+    background-color: #ff4b6e;
+    color: white;
+    flex: 1;
+}
+
+.login-section {
+    flex: 1;
+    background-color: #fff;
+}
+
+.brand-title, .login-title {
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.input-field {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.input-field input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.login-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.remember-me label {
+    font-size: 14px;
+}
+
+.forgot-password {
+    color: #ff4b6e;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background-color: #ff4b6e;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e8435a;
+}
+
+
+/* ... rest of your CSS above ... */
+
+.button-group {
+    display: flex;
+    justify-content: center; /* Align buttons center horizontally */
+    gap: 10px; /* This creates space between items in a flex container */
+}
+
+.login-button, .signup-button {
+    padding: 15px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none; /* Removes the outline to maintain style consistency */
+    flex: 1; /* Makes both buttons take up equal space */
+}
+
+.login-button {
+    background-color: #ff4b6e;
+}
+
+.signup-button {
+    background-color: white;
+    color: #ff4b6e;
+    border: 1px solid #ff4b6e;
+}
+
+/* Adding space specifically between buttons */
+.login-button {
+    margin-right: 5px; /* Adds space to the right of the login button */
+}
+
+.signup-button {
+    margin-left: 5px; /* Adds space to the left of the signup button */
+}
+
+/* ... rest of your CSS ... */
+.signup-button {
+    display: inline-block; /* Allows padding and margin like a button */
+    background-color: white;
+    color: #ff4b6e;
+    border: 1px solid #ff4b6e;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none; /* Removes the underline from links */
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px; /* Add space between the buttons */
+}
+/* ... rest of your CSS ... */
+
+
+/* display page */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.brand-section {
+    background-color: #ff4b6e;
+    color: white;
+    padding: 30px;
+    width: 30%;
+}
+
+.form-section {
+    background-color: #fff;
+    padding: 30px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2 {
+    margin: 0 0 15px 0;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.button-group {
+    text-align: right;
+}
+
+.btn {
+    background-color: #ff4b6e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #e8435a;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .brand-section,
+    .form-section {
+        width: 100%;
+    }
+}
